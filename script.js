@@ -6,3 +6,9 @@ setInterval(() => {
   current = (current + 1) % slides.length;
   slides[current].classList.add("active");
 }, 5000); // cambia cada 5 segundos
+
+const slideshow = document.getElementById("slideshow");
+slideshow.addEventListener("click", () => {
+  window.location.href = "trabajos.html";
+});
+
