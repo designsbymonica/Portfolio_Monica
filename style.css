@@ -10,13 +10,18 @@ body {
   color: #1a1a1a;
   background-color: #EDE7D9;
   font-size: 1.5em;
+  background-image: url("img/sobre3.png"); /* Cambia por la ruta real */
+  background-size: cover;         /* Ajusta la imagen al tamaño de la pantalla */
+  background-position: center;    /* Centra la imagen */
+  background-repeat: no-repeat;   /* Evita que se repita */
+  background-attachment: fixed;   /* Opcional: efecto parallax leve */
 }
 
 html, body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  overflow-x: hidden; /* ✅ Bloquea solo scroll horizontal */
+  /* overflow-x: hidden; ✅ Bloquea solo scroll horizontal */
 }
 
 /* -- PRINCIPAL -- */
@@ -24,24 +29,25 @@ html, body {
 /* MENÚ */
 
 a {
-    text-decoration: none;
-    color: #A42F25;
-    font-weight: 500;
+  text-decoration: none;
+  color: #A42F25;
+  font-weight: 500;
 }
 
 header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    z-index: 2;
-    justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  justify-content: space-between;
 }
 
+
 .logo {
-    padding-left: 1.5em;
+  padding-left: 1.5em;
 
 }
 
@@ -55,14 +61,14 @@ header {
 }
 
 .paginas {
-    padding-right: 1.5em;
+  padding-right: 1.5em;
 }
 
 .paginas ul {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-    width: fit-content;
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  width: fit-content;
 }
 
 .paginas a {
@@ -290,43 +296,80 @@ footer {
 
 .sobre-mi {
   display: flex;
-  flex-wrap: wrap;
-  gap: 130px;
-  padding-top: 160px;
   align-items: flex-start;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding: 100px 40px 80px;
+  gap: 40px;
 }
 
 .sobre-mi .texto {
   flex: 1;
-  min-width: 280px;
+  position: sticky;
+  top: 100px; /* se mantiene visible a partir de este punto */
+  align-self: flex-start;
 }
 
 .sobre-mi .texto h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.5em;
 }
 
 .sobre-mi .texto p {
-  line-height: 1.3;
-  margin-bottom: 15px;
   font-size: 0.8em;
 }
 
-.sobre-mi .foto {
+.sobre-mi .imagenes {
   flex: 1;
-  width: 50%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.sobre-mi .foto img {
+.sobre-mi .imagenes img {
   width: 100%;
-  /* max-width: 400px; */
   height: auto;
-  border-radius: 12px;
+  display: block;
   object-fit: cover;
+  border-radius: 8px;
 }
+
+/* --- PROYECTO INDIVIDUAL --- */
+
+.proyecto-detalle {
+  display: flex;
+  align-items: flex-start;
+  padding: 100px 40px 80px;
+  gap: 40px;
+}
+
+.proyecto-detalle .texto {
+  flex: 1;
+  position: sticky;
+  top: 100px; /* se mantiene visible a partir de este punto */
+  align-self: flex-start;
+}
+
+.proyecto-detalle .texto h1 {
+  font-size: 1.5em;
+}
+
+.proyecto-detalle .texto p {
+  font-size: 0.8em;
+}
+
+.proyecto-detalle .imagenes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.proyecto-detalle .imagenes img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 
 /* -- MEDIA QUERIES -- */
 
@@ -406,22 +449,29 @@ footer {
 
 @media (max-width: 1200px) {
   .sobre-mi {
-    flex-direction: column;
-    /* padding: 40px 5%; */
-    padding-top: 120px;
-    gap: 18px;
-    padding-bottom: 2em;
-    padding-left: 1em;
-    padding-right: 1em;
+  flex-direction: column;
   }
 
-.sobre-mi .foto {
+/* .sobre-mi .foto {
     flex: 1;
     width: 100%;
     text-align: center;
-}
+} */
 
-  .sobre-mi .texto h1 {
-    font-size: 1.6rem;
+  .sobre-mi .texto {
+    position: static;
+    top: auto;
   }
 }
+
+@media (max-width: 768px) {
+  .proyecto-detalle {
+    flex-direction: column;
+  }
+
+  .proyecto-detalle .texto {
+    position: static;
+    top: auto;
+  }
+}
+
