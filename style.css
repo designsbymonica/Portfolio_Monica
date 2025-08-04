@@ -10,11 +10,6 @@ body {
   color: #1a1a1a;
   background-color: #EDE7D9;
   font-size: 1.5em;
-  background-image: url("img/sobre3.png"); /* Cambia por la ruta real */
-  background-size: cover;         /* Ajusta la imagen al tamaño de la pantalla */
-  background-position: center;    /* Centra la imagen */
-  background-repeat: no-repeat;   /* Evita que se repita */
-  background-attachment: fixed;   /* Opcional: efecto parallax leve */
 }
 
 html, body {
@@ -25,6 +20,61 @@ html, body {
 }
 
 /* -- PRINCIPAL -- */
+
+.fondo-svg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.forma-svg {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  opacity: 0.15;
+  animation: rotarSuave 40s infinite linear;
+  transform-origin: center;
+}
+
+.forma-svg.uno {
+  top: 20%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.forma-svg.dos {
+  top: 50%;
+  left: 50%;
+  animation-delay: 10s;
+}
+
+@keyframes rotarSuave {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
+/* Asegura que el contenido esté por encima */
+main, header, footer {
+  position: relative;
+  z-index: 1;
+}
+
+
+.index {
+  /* background-image: url("img/IMG_0106.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 /* MENÚ */
 
@@ -412,10 +462,6 @@ footer {
     margin: 0;
   }
 
-  .titulo-central h1 {
-    font-size: 2rem;
-    margin: 0;
-  }
 
   .logo a {
     font-size: 1.2rem;
@@ -472,6 +518,14 @@ footer {
   .proyecto-detalle .texto {
     position: static;
     top: auto;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .titulo-central h1 {
+    font-size: 2rem;
+    margin: 0;
   }
 }
 
