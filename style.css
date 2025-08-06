@@ -21,7 +21,7 @@ html, body {
 
 /* -- PRINCIPAL -- */
 
-.fondo-svg {
+.fondo-imgs {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
@@ -31,33 +31,37 @@ html, body {
   pointer-events: none;
 }
 
-.forma-svg {
+.img-fondo {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  opacity: 0.15;
-  animation: rotarSuave 40s infinite linear;
+  width: 250px; /* o el tamaño que quieras en pantalla */
+  opacity: 0.7;
+  animation: flotar 30s infinite ease-in-out;
   transform-origin: center;
 }
 
-.forma-svg.uno {
-  top: 20%;
-  left: 30%;
+/* Posiciones iniciales distintas para cada imagen */
+.img-fondo.uno {
+  top: 24%;
+  left: 19%;
   animation-delay: 0s;
 }
 
-.forma-svg.dos {
-  top: 50%;
-  left: 50%;
-  animation-delay: 10s;
+.img-fondo.dos {
+  top: 44%;
+  left: 60%;
+  animation-delay: 0s;
 }
 
-@keyframes rotarSuave {
+/* Animación sutil de rotación y movimiento */
+@keyframes flotar {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(15px, -15px) rotate(20deg);
   }
   100% {
-    transform: rotate(360deg) scale(1.1);
+    transform: translate(0, 0) rotate(0deg);
   }
 }
 
