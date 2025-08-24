@@ -453,6 +453,12 @@ footer {
   border-radius: 8px;
 }
 
+.proyecto-detalle .imagenes video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* opcional, si quieres igual que tus imágenes */
+}
 
 /* -- MEDIA QUERIES -- */
 
