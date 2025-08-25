@@ -49,7 +49,7 @@ html, body {
 .img-fondo.dos {
   top: 44%;
   left: 60%;
-  animation-delay: 0s;
+  animation-delay: 2s;
 }
 
 /* Animación sutil de rotación y movimiento */
@@ -58,7 +58,7 @@ html, body {
     transform: translate(0, 0) rotate(0deg);
   }
   50% {
-    transform: translate(15px, -15px) rotate(20deg);
+    transform: translate(50px, -50px) rotate(40deg);
   }
   100% {
     transform: translate(0, 0) rotate(0deg);
@@ -370,7 +370,7 @@ footer {
 .sobre-mi {
   display: flex;
   align-items: flex-start;
-  padding: 100px 40px 80px;
+  padding: 100px 40px 10px;
   gap: 40px;
 }
 
