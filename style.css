@@ -34,7 +34,7 @@ html, body {
 .img-fondo {
   position: absolute;
   width: 250px; /* o el tamaño que quieras en pantalla */
-  opacity: 0.7;
+  opacity: 1;
   animation: flotar 30s infinite ease-in-out;
   transform-origin: center;
 }
