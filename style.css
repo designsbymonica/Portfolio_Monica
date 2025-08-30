@@ -473,6 +473,22 @@ footer {
     outline-offset: 2px;
   }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* ajusta al tamaño que quieras */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px; /* opcional */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* opcional */
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* -- MEDIA QUERIES -- */
 
 
