@@ -460,6 +460,19 @@ footer {
   border-radius: 8px; /* opcional, si quieres igual que tus imágenes */
 }
 
+ .enlace-proyecto {
+    color: #1a1a1a;               /* negro */
+    text-decoration: none;     /* sin subrayado por defecto */
+    font-size: 1em;
+  }
+  .enlace-proyecto:hover {
+    text-decoration: underline;/* subraya al pasar el ratón */
+  }
+  .enlace-proyecto:focus-visible {
+    outline: 2px solid;        /* accesible con teclado */
+    outline-offset: 2px;
+  }
+
 /* -- MEDIA QUERIES -- */
 
 
