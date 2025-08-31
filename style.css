@@ -100,6 +100,7 @@ header {
 }
 
 
+
 .logo {
   padding-left: 1.5em;
 
@@ -210,19 +211,18 @@ header {
 /* FOOTER */
 
 footer {
-  text-align: right;
+  display: flex;
+  justify-content: space-between; /* izquierda y derecha */
+  align-items: center;
+  padding: 20px 40px;
   font-size: 14px;
   color: rgb(26, 26, 26);
   z-index: 10;
-  display: flex;
-  flex-direction: row-reverse;
 }
 
-.footer-content {
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  padding: 1.5em;
-  /* border-radius: 20px; */
-  /* backdrop-filter: blur(4px); */
+.footer-left {
+  font-size: 0.9em;
+  color: rgb(26, 26, 26);
 }
 
 .footer-content a {
@@ -232,7 +232,7 @@ footer {
   font-size: 1.5em;
 }
 
-.footer-content a span{
+.footer-content a span {
   color: rgb(26, 26, 26);
 }
 
@@ -243,6 +243,25 @@ footer {
 .icono-footer {
   display: none !important;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .texto-footer {
+    display: none !important;
+  }
+  .icono-footer {
+    display: inline !important;
+    font-size: 1.8rem;
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left {
+    margin-bottom: 10px;
+  }
+}
+
 
 /* -- PROYECTOS -- */
 
@@ -404,6 +423,13 @@ footer {
   border-radius: 8px;
 }
 
+.sobre-mi .imagenes video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
 .sobre-mi .texto p a {
   text-decoration: none;   /* sin subrayado normal */
   color: inherit;          /* usa el color del texto que tengas */
@@ -545,14 +571,7 @@ footer {
     top: 0;
   }
 
-  .texto-footer {
-    display: none !important;
-  }
 
-  .icono-footer {
-    display: inline !important;
-    font-size: 1.8rem;
-  }
 
   .galeria {
     grid-template-columns: 1fr;
