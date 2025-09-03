@@ -52,6 +52,30 @@ html, body {
   animation-delay: 2s;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .img-fondo {
+  position: absolute;
+  width: 150px; /* o el tamaño que quieras en pantalla */
+  opacity: 1;
+  animation: flotar 30s infinite ease-in-out;
+  transform-origin: center;
+}
+
+/* Posiciones iniciales distintas para cada imagen */
+.img-fondo.uno {
+  top: 24%;
+  left: 19%;
+  animation-delay: 0s;
+}
+
+.img-fondo.dos {
+  top: 44%;
+  left: 60%;
+  animation-delay: 2s;
+}
+}
+
 /* Animación sutil de rotación y movimiento */
 @keyframes flotar {
   0% {
