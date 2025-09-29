@@ -245,8 +245,15 @@ footer {
 }
 
 .footer-left {
-  font-size: 0.9em;
   color: rgb(26, 26, 26);
+  text-decoration: none;
+  /* margin: 0 8px; */
+  font-size: 1.5em;
+}
+
+.footer-left p {
+  margin: 0;
+  font-weight: 500;
 }
 
 .footer-content a {
