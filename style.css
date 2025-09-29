@@ -244,11 +244,13 @@ footer {
   z-index: 10;
 }
 
+/* ---- IZQUIERDA ---- */
 .footer-left {
-  color: rgb(26, 26, 26);
-  text-decoration: none;
-  /* margin: 0 8px; */
+  display: flex;
+  align-items: center;
+  gap: 20px; /* separación entre © y el selector de idioma */
   font-size: 1.5em;
+  color: rgb(26, 26, 26);
 }
 
 .footer-left p {
@@ -256,6 +258,30 @@ footer {
   font-weight: 500;
 }
 
+/* ---- Selector de idioma ---- */
+.idioma {
+  font-weight: 500;
+  display: flex;
+  gap: 4px;
+}
+
+.idioma a {
+  color: rgb(26, 26, 26);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.idioma a:hover {
+  text-decoration: underline;
+}
+
+.idioma .activo {
+  font-weight: 700;
+  /* text-decoration: underline; */
+}
+
+/* ---- DERECHA ---- */
 .footer-content a {
   color: rgb(26, 26, 26);
   text-decoration: none;
@@ -271,27 +297,36 @@ footer {
   text-decoration: underline;
 }
 
+/* ---- Iconos responsive ---- */
 .icono-footer {
   display: none !important;
 }
 
-/* Responsive */
+/* ---- Responsive ---- */
 @media (max-width: 768px) {
   .texto-footer {
     display: none !important;
   }
+
   .icono-footer {
     display: inline !important;
     font-size: 1.8rem;
   }
+
   footer {
     flex-direction: column;
     text-align: center;
+    gap: 10px;
   }
+
   .footer-left {
-    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
   }
 }
+
+
 
 
 /* -- PROYECTOS -- */
